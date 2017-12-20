@@ -1,0 +1,30 @@
+server:
+  port: 7020
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/he313572/SpringCloud/
+          search-paths: config-repo
+          username: he313572
+          password: chaijumei.,@1989
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 192.168.20.155
+    port: 5672
+    username: admin
+    password: 313572
+   
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+management:
+  security:
+     enabled: false
+  
